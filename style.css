@@ -1,153 +1,118 @@
-/* RESET & BASICS */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  background-color: #ffffff;
-  color: #1a1a1a;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Inter", sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
+    /* Dark Navy Background matches the Carrd image */
+    background-color: #1e202e; 
+    color: #ffffff;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* CONTAINER */
-.resume-container {
-  max-width: 700px; /* Optimal reading width */
-  margin: 0 auto;
-  padding: 4rem 1.5rem;
+/* MAIN CONTAINER */
+.container {
+    flex: 1; /* Pushes footer to bottom */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* HEADER */
-.header {
-  margin-bottom: 2rem;
+/* PROFILE PICTURE */
+.profile-wrapper {
+    margin-bottom: 2rem;
 }
 
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #3b3e54; /* Placeholder color if image fails */
+    border: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+/* TYPOGRAPHY */
 .name {
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  margin-bottom: 0.5rem;
-  color: #000;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
 }
 
-.tagline {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 1rem;
+.subtitle {
+    font-size: 1.1rem;
+    color: #5c8bd6; /* The specific blueish/purple from your image */
+    margin-bottom: 3.5rem;
+    font-weight: 500;
 }
 
-.links {
-  display: flex;
-  gap: 1.5rem;
-  font-size: 0.95rem;
+/* TEXT BLOCKS */
+.text-block {
+    margin-bottom: 3rem;
+    line-height: 1.8;
 }
 
-.links a {
-  color: #000;
-  text-decoration: none;
-  border-bottom: 1px solid #ccc;
-  transition: border-color 0.2s;
-}
-
-.links a:hover {
-  border-bottom: 1px solid #000;
-}
-
-/* DIVIDER */
-.divider {
-  border: 0;
-  border-top: 1px solid #eee;
-  margin: 2.5rem 0;
-}
-
-/* SECTIONS */
-.section {
-  margin-bottom: 3rem;
-}
-
-.section-title {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #888;
-  margin-bottom: 1.5rem;
-  font-weight: 600;
-}
-
-/* ENTRIES (Job/Education) */
-.entry {
-  margin-bottom: 2rem;
-}
-
-.entry-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 0.2rem;
-}
-
-.role {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #000;
-}
-
-.date {
-  font-size: 0.9rem;
-  color: #666;
-  font-feature-settings: "tnum"; /* Tabular numbers for alignment */
-}
-
-.company {
-  font-size: 1rem;
-  color: #444;
-  margin-bottom: 0.6rem;
-  font-style: italic;
-}
-
-.description {
-  color: #333;
-  font-size: 0.95rem;
-}
-
-.meta {
-  color: #666;
-  font-size: 0.9rem;
-}
-
-/* SKILLS */
-.skills {
-  font-size: 0.95rem;
+.text-block p {
+    color: #d1d5db; /* Soft white/grey */
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 /* FOOTER */
-.footer {
-  margin-top: 4rem;
-  font-size: 0.85rem;
-  color: #999;
-  text-align: center;
+.footer-bar {
+    background-color: #5bbad5; /* The teal bar from the bottom of your image */
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
 }
 
-/* RESPONSIVE */
+.button-container {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* BUTTONS */
+.btn {
+    text-decoration: none;
+    color: #1e202e;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 0.6rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* MOBILE ADJUSTMENTS */
 @media (max-width: 600px) {
-  .resume-container {
-    padding: 2.5rem 1.2rem;
-  }
-  
-  .name {
-    font-size: 1.8rem;
-  }
-  
-  .entry-header {
-    flex-direction: column;
-  }
-  
-  .date {
-    margin-bottom: 0.2rem;
-    font-size: 0.85rem;
-  }
+    .name {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .text-block {
+        margin-bottom: 2rem;
+    }
 }
