@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Oscar McCann</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero-text">
+        <h1 class="name">Oscar McCann</h1>
+        <p class="tagline">
+          <!-- You can change this line -->
+          Student at Cambridge • Aspiring finance professional
+        </p>
+      </div>
+      <div class="hero-photo">
+        <img src="images/profile.jpg" alt="Photo of Oscar McCann" />
+      </div>
+    </header>
+
+    <main>
+      <!-- ABOUT -->
+      <section class="card" id="about">
+        <h2>About</h2>
+        <p>
+          <!-- Write your own text here -->
+          This is where you can introduce yourself in 3–5 sentences. Talk about
+          your background, what you're studying, and what you're interested in.
+        </p>
+      </section>
+
+      <!-- EXPERIENCE / EDUCATION -->
+      <section class="card" id="cv">
+        <h2>Experience & Education</h2>
+
+        <div class="cv-grid">
+          <div>
+            <h3>Experience</h3>
+            <ul class="cv-list">
+              <li>
+                <strong>Role / Internship</strong> — Company Name<br />
+                <span class="cv-meta">Date — Location</span><br />
+                <span class="cv-detail">
+                  Write 1–2 sentences describing what you did.
+                </span>
+              </li>
+
+              <li>
+                <strong>Another position</strong> — Company Name<br />
+                <span class="cv-meta">Date — Location</span><br />
+                <span class="cv-detail">
+                  Another description goes here.
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3>Education</h3>
+            <ul class="cv-list">
+              <li>
+                <strong>University of Cambridge</strong><br />
+                <span class="cv-meta">Course / Subject • Year(s)</span><br />
+                <span class="cv-detail">
+                  You can add quick notes, achievements, or societies.
+                </span>
+              </li>
+            </ul>
+
+            <h3>Skills / Interests</h3>
+            <p class="cv-detail">
+              Languages • Finance • Markets • Coding • AI • etc.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXTRA SECTION (OPTIONAL) -->
+      <section class="card" id="gallery">
+        <h2>Extra</h2>
+        <p>
+          Use this for projects, achievements, interests, or anything else.
+        </p>
+
+        <div class="image-row">
+          <div class="image-placeholder"><span>Optional image</span></div>
+          <div class="image-placeholder"><span>Optional image</span></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <h2>Contact</h2>
+      <p class="contact-text">Get in touch via email or LinkedIn.</p>
+
+      <div class="contact-links">
+        <a href="mailto:ojpm2@cam.ac.uk" class="btn">Email</a>
+
+        <a href="https://www.linkedin.com/in/oscar-mccann-om6" target="_blank" rel="noopener" class="btn outline">
+          LinkedIn
+        </a>
+      </div>
+
+      <p class="footer-small">© <span id="year"></span> Oscar McCann</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
