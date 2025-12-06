@@ -6,8 +6,7 @@
 }
 
 body {
-    /* Dark Navy Background matches the Carrd image */
-    background-color: #1e202e; 
+    background-color: #1e202e; /* Dark Navy */
     color: #ffffff;
     font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     min-height: 100vh;
@@ -15,21 +14,26 @@ body {
     flex-direction: column;
 }
 
-/* MAIN CONTAINER */
-.container {
-    flex: 1; /* Pushes footer to bottom */
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 4rem 1.5rem;
-    text-align: center;
+/* MAIN LAYOUT */
+.main-content {
+    flex: 1;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center; /* Centers the box horizontally */
+    align-items: center;     /* Centers the box vertically */
+    padding: 3rem 1.5rem;
 }
 
-/* PROFILE PICTURE */
+/* THE BOX */
+.content-box {
+    width: 100%;
+    max-width: 550px; /* Limits width so it looks like a document/card */
+    text-align: left; /* Default alignment for text inside is Left */
+}
+
+/* PROFILE & HEADERS (Override Left Align to be Centered) */
 .profile-wrapper {
-    margin-bottom: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
 }
 
 .profile-pic {
@@ -37,82 +41,76 @@ body {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    background-color: #3b3e54; /* Placeholder color if image fails */
+    background-color: #3b3e54;
     border: 3px solid rgba(255, 255, 255, 0.1);
 }
 
-/* TYPOGRAPHY */
 .name {
-    font-size: 2.5rem;
-    font-weight: 600;
+    font-size: 2.2rem;
+    font-weight: 700;
     letter-spacing: -0.02em;
     margin-bottom: 0.5rem;
     color: #ffffff;
+    text-align: center;
 }
 
 .subtitle {
     font-size: 1.1rem;
-    color: #5c8bd6; /* The specific blueish/purple from your image */
-    margin-bottom: 3.5rem;
+    color: #5c8bd6; /* The blue accent */
+    margin-bottom: 3rem;
     font-weight: 500;
+    text-align: center;
 }
 
-/* TEXT BLOCKS */
+/* TEXT BLOCKS (Left Aligned) */
 .text-block {
-    margin-bottom: 3rem;
-    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    padding-left: 1.2rem;
+    border-left: 2px solid rgba(92, 139, 214, 0.3); /* Subtle blue line on left */
 }
 
 .text-block p {
-    color: #d1d5db; /* Soft white/grey */
+    color: #d1d5db; /* Soft grey text */
     font-size: 1rem;
-    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    margin-bottom: 0.6rem;
 }
 
 /* FOOTER */
 .footer-bar {
-    background-color: #5bbad5; /* The teal bar from the bottom of your image */
+    background-color: #262a3b; /* Muted, slightly lighter than bg */
     padding: 1.5rem;
     display: flex;
     justify-content: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.button-container {
+.icon-container {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
-/* BUTTONS */
-.btn {
-    text-decoration: none;
-    color: #1e202e;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 0.6rem 1.8rem;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 0.9rem;
+.icon-btn {
+    color: #8b9bb4; /* Muted slate color for icons */
     transition: all 0.2s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.03);
 }
 
-.btn:hover {
-    background-color: #ffffff;
+.icon-btn:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-/* MOBILE ADJUSTMENTS */
+/* MOBILE TWEAKS */
 @media (max-width: 600px) {
-    .name {
-        font-size: 2rem;
-    }
-    
-    .subtitle {
-        font-size: 1rem;
-        margin-bottom: 2.5rem;
-    }
-
-    .text-block {
-        margin-bottom: 2rem;
+    .main-content {
+        align-items: flex-start; /* Start from top on mobile */
+        padding-top: 4rem;
     }
 }
