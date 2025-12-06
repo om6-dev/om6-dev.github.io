@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #1e202e; /* Dark Navy */
+    background-color: #1e202e; /* Dark Navy Background */
     color: #ffffff;
     font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     min-height: 100vh;
@@ -14,35 +14,36 @@ body {
     flex-direction: column;
 }
 
-/* MAIN LAYOUT */
-.main-content {
-    flex: 1;
-    display: flex;
-    justify-content: center; /* Centers the box horizontally */
-    align-items: center;     /* Centers the box vertically */
-    padding: 3rem 1.5rem;
-}
-
-/* THE BOX */
-.content-box {
+/* MAIN CONTAINER */
+.main-container {
+    flex: 1; /* Pushes footer to bottom */
     width: 100%;
-    max-width: 550px; /* Limits width so it looks like a document/card */
-    text-align: left; /* Default alignment for text inside is Left */
+    padding: 4rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This forces the "Box" to be in the middle of the screen */
 }
 
-/* PROFILE & HEADERS (Override Left Align to be Centered) */
-.profile-wrapper {
-    text-align: center;
-    margin-bottom: 1.5rem;
+/* --- HEADER STYLES (CENTERED) --- */
+.profile-header {
+    text-align: center; /* Forces Name/Photo to center */
+    margin-bottom: 3rem;
+}
+
+.image-container {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 1.5rem auto; /* Centers the image block */
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    object-fit: cover;
-    background-color: #3b3e54;
-    border: 3px solid rgba(255, 255, 255, 0.1);
+    object-fit: cover; /* Ensures zoomed-in look without distortion */
+    object-position: top center; /* Focuses on face if image is tall */
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    background-color: #2a2d3e;
 }
 
 .name {
@@ -51,34 +52,36 @@ body {
     letter-spacing: -0.02em;
     margin-bottom: 0.5rem;
     color: #ffffff;
-    text-align: center;
 }
 
 .subtitle {
     font-size: 1.1rem;
-    color: #5c8bd6; /* The blue accent */
-    margin-bottom: 3rem;
+    color: #5c8bd6; /* Blue accent color */
     font-weight: 500;
-    text-align: center;
 }
 
-/* TEXT BLOCKS (Left Aligned) */
+/* --- CONTENT BOX (LEFT ALIGNED TEXT) --- */
+.content-box {
+    width: 100%;
+    max-width: 550px; /* Limits width like a card */
+    text-align: left; /* KEY: Forces the text inside to read Left-to-Right */
+}
+
 .text-block {
     margin-bottom: 2.5rem;
-    padding-left: 1.2rem;
-    border-left: 2px solid rgba(92, 139, 214, 0.3); /* Subtle blue line on left */
 }
 
 .text-block p {
-    color: #d1d5db; /* Soft grey text */
+    color: #d1d5db; /* Light Grey text */
     font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 0.6rem;
+    line-height: 1.6; /* Good spacing between lines */
+    margin-bottom: 0.8rem;
 }
 
-/* FOOTER */
+/* --- FOOTER (MUTED) --- */
 .footer-bar {
-    background-color: #262a3b; /* Muted, slightly lighter than bg */
+    /* Muted Dark Slate - Professional and not distracting */
+    background-color: #2d3748; 
     padding: 1.5rem;
     display: flex;
     justify-content: center;
@@ -90,27 +93,17 @@ body {
     gap: 2rem;
 }
 
+/* ICON STYLES */
 .icon-btn {
-    color: #8b9bb4; /* Muted slate color for icons */
+    color: #ffffff; /* WHITE icons for high contrast */
+    opacity: 0.7;   /* Slightly transparent */
     transition: all 0.2s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.03);
 }
 
 .icon-btn:hover {
-    color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.1);
+    opacity: 1; /* Full white on hover */
     transform: translateY(-2px);
-}
-
-/* MOBILE TWEAKS */
-@media (max-width: 600px) {
-    .main-content {
-        align-items: flex-start; /* Start from top on mobile */
-        padding-top: 4rem;
-    }
 }
