@@ -7,111 +7,85 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="page">
-    <!-- HERO -->
-    <header class="hero">
-      <div class="hero-text">
-        <h1 class="name">Oscar McCann</h1>
-        <p class="tagline">
-          <!-- You can change this line -->
-          Student at Cambridge • Aspiring finance professional
-        </p>
-      </div>
-      <div class="hero-photo">
-        <img src="images/profile.jpg" alt="Photo of Oscar McCann" />
-      </div>
+
+  <main class="resume-container">
+    
+    <header class="header">
+      <h1 class="name">Oscar McCann</h1>
+      <p class="tagline">Student at Cambridge &bull; Aspiring Finance Professional</p>
+      
+      <nav class="links">
+        <a href="mailto:ojpm2@cam.ac.uk">Email</a>
+        <a href="https://www.linkedin.com/in/oscar-mccann-om6" target="_blank" rel="noopener">LinkedIn</a>
+        </nav>
     </header>
 
-    <main>
-      <!-- ABOUT -->
-      <section class="card" id="about">
-        <h2>About</h2>
-        <p>
-          <!-- Write your own text here -->
-          This is where you can introduce yourself in 3–5 sentences. Talk about
-          your background, what you're studying, and what you're interested in.
-        </p>
-      </section>
+    <hr class="divider" />
 
-      <!-- EXPERIENCE / EDUCATION -->
-      <section class="card" id="cv">
-        <h2>Experience & Education</h2>
+    <section class="section">
+      <h2 class="section-title">About</h2>
+      <p class="summary">
+        I am a student at the University of Cambridge with a strong interest in financial markets, asset management, and quantitative analysis. I am seeking internship opportunities where I can apply my analytical skills and academic background to solve complex financial problems.
+      </p>
+    </section>
 
-        <div class="cv-grid">
-          <div>
-            <h3>Experience</h3>
-            <ul class="cv-list">
-              <li>
-                <strong>Role / Internship</strong> — Company Name<br />
-                <span class="cv-meta">Date — Location</span><br />
-                <span class="cv-detail">
-                  Write 1–2 sentences describing what you did.
-                </span>
-              </li>
-
-              <li>
-                <strong>Another position</strong> — Company Name<br />
-                <span class="cv-meta">Date — Location</span><br />
-                <span class="cv-detail">
-                  Another description goes here.
-                </span>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3>Education</h3>
-            <ul class="cv-list">
-              <li>
-                <strong>University of Cambridge</strong><br />
-                <span class="cv-meta">Course / Subject • Year(s)</span><br />
-                <span class="cv-detail">
-                  You can add quick notes, achievements, or societies.
-                </span>
-              </li>
-            </ul>
-
-            <h3>Skills / Interests</h3>
-            <p class="cv-detail">
-              Languages • Finance • Markets • Coding • AI • etc.
-            </p>
-          </div>
+    <section class="section">
+      <h2 class="section-title">Experience</h2>
+      
+      <div class="entry">
+        <div class="entry-header">
+          <h3 class="role">Summer Analyst</h3>
+          <span class="date">Jun 2024 &ndash; Aug 2024</span>
         </div>
-      </section>
-
-      <!-- EXTRA SECTION (OPTIONAL) -->
-      <section class="card" id="gallery">
-        <h2>Extra</h2>
-        <p>
-          Use this for projects, achievements, interests, or anything else.
+        <div class="company">Goldman Sachs, London</div>
+        <p class="description">
+          Rotated across Global Markets and Investment Banking divisions. Built financial models to value potential M&A targets and presented findings to senior leadership.
         </p>
-
-        <div class="image-row">
-          <div class="image-placeholder"><span>Optional image</span></div>
-          <div class="image-placeholder"><span>Optional image</span></div>
-        </div>
-      </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <h2>Contact</h2>
-      <p class="contact-text">Get in touch via email or LinkedIn.</p>
-
-      <div class="contact-links">
-        <a href="mailto:ojpm2@cam.ac.uk" class="btn">Email</a>
-
-        <a href="https://www.linkedin.com/in/oscar-mccann-om6" target="_blank" rel="noopener" class="btn outline">
-          LinkedIn
-        </a>
       </div>
 
-      <p class="footer-small">© <span id="year"></span> Oscar McCann</p>
-    </footer>
-  </div>
+      <div class="entry">
+        <div class="entry-header">
+          <h3 class="role">Research Intern</h3>
+          <span class="date">Jun 2023 &ndash; Sep 2023</span>
+        </div>
+        <div class="company">Cambridge Economic Policy Institute</div>
+        <p class="description">
+          Assisted in data analysis for a published paper on macroeconomic trends in post-Brexit UK. Utilized Python and Excel for data visualization.
+        </p>
+      </div>
+    </section>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+      
+      <div class="entry">
+        <div class="entry-header">
+          <h3 class="role">University of Cambridge</h3>
+          <span class="date">2022 &ndash; 2025</span>
+        </div>
+        <div class="company">BA (Hons) Economics</div>
+        <p class="description">
+          First Class Honours (Part I). Relevant modules: Econometrics, Macroeconomics, Financial Markets.
+          <br>
+          <span class="meta">Member of the Cambridge Union, Investment Society Treasurer.</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Skills & Interests</h2>
+      <p class="skills">
+        <strong>Technical:</strong> Python (Pandas, NumPy), Excel (VBA), Bloomberg Terminal.<br>
+        <strong>Languages:</strong> English (Native), French (B2).<br>
+        <strong>Interests:</strong> Rowing, History of Finance, Chess.
+      </p>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; <script>document.write(new Date().getFullYear())</script> Oscar McCann</p>
+    </footer>
+
+  </main>
+
 </body>
 </html>
